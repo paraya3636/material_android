@@ -6,10 +6,11 @@ import android.support.v4.app.ActivityOptionsCompat
 import android.support.v4.util.Pair
 import android.view.View
 import android.widget.TextView
+import org.paradrops.materialsample.view.activitytransition.MultipleSharedElementsActivity
+import org.paradrops.materialsample.view.activitytransition.SharedElementActivity
+import org.paradrops.materialsample.view.activitytransition.TransitionActivity
+import org.paradrops.materialsample.view.fragmenttransition.FragmentTransitionActivity
 import org.paradrops.materialsample.view.top.TopActivity
-import org.paradrops.materialsample.view.transition.MultipleSharedElementsActivity
-import org.paradrops.materialsample.view.transition.SharedElementActivity
-import org.paradrops.materialsample.view.transition.TransitionActivity
 
 class Navigator {
     companion object {
@@ -21,15 +22,19 @@ class Navigator {
             context.startActivity(TransitionActivity.navigateIntent(context))
         }
 
+        fun goFragmentTransitionView(context: Context) {
+            context.startActivity(FragmentTransitionActivity.navigateIntent(context))
+        }
+
         fun goSharedElementView(context: Context, sharedElement: View) {
-            val sharedElementName = context.resources.getString(R.string.ShearedImage)
+            val sharedElementName = context.resources.getString(R.string.CommonSharedImage)
             val options = ActivityOptionsCompat.makeSceneTransitionAnimation(context as Activity, sharedElement, sharedElementName)
             context.startActivity(SharedElementActivity.navigateIntent(context), options.toBundle())
         }
 
         fun goMultipleSharedElementsView(context: Context, sharedImageView: View, sharedTextView: TextView) {
-            val sharedImageTag = context.resources.getString(R.string.ShearedImage)
-            val sharedTitleTag = context.resources.getString(R.string.ShearedTitle)
+            val sharedImageTag = context.resources.getString(R.string.CommonSharedImage)
+            val sharedTitleTag = context.resources.getString(R.string.CommonSharedTitle)
 
             val element1 = Pair<View, String>(sharedImageView, sharedImageTag)
             val element2 = Pair<View, String>(sharedTextView, sharedTitleTag)

@@ -1,4 +1,4 @@
-package org.paradrops.materialsample.view.transition
+package org.paradrops.materialsample.view.activitytransition
 
 import android.content.Context
 import android.content.Intent

@@ -44,6 +44,7 @@ class TopActivity : AppCompatActivity(), TopViewContentAdapter.OnItemClickListen
     override fun onItemClick(view: View, position: Int) {
         when(position) {
             0 -> Navigator.goTransitionView(this)
+            1 -> Navigator.goFragmentTransitionView(this)
             else -> {
                 // Do nothing
             }
