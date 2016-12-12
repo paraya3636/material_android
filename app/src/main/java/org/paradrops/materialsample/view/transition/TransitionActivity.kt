@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.ImageButton
+import android.widget.TextView
 import butterknife.bindView
 import org.paradrops.materialsample.Navigator
 import org.paradrops.materialsample.R
@@ -17,7 +18,8 @@ class TransitionActivity : AppCompatActivity() {
     }
 
     private val activityTransitionButton by bindView<ImageButton>(R.id.activityTransitionButton)
-    private val fragmentTransitionButton by bindView<ImageButton>(R.id.fragmentTransitionButton)
+    private val multipleSharedElementsButton by bindView<ImageButton>(R.id.multipleSharedElementsButton)
+    private val multipleSharedElementsTitle by bindView<TextView>(R.id.multipleSharedElementsTitle)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,8 +29,8 @@ class TransitionActivity : AppCompatActivity() {
             Navigator.goSharedElementView(this, activityTransitionButton)
         }
 
-        fragmentTransitionButton.setOnClickListener {
-
+        multipleSharedElementsButton.setOnClickListener {
+            Navigator.goMultipleSharedElementsView(this, multipleSharedElementsButton, multipleSharedElementsTitle)
         }
     }
 }

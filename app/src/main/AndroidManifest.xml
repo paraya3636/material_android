@@ -20,7 +20,8 @@
             android:label="@string/title_activity_top"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".view.transition.TransitionActivity" />
-        <activity android:name=".view.transition.SharedElementActivity"></activity>
+        <activity android:name=".view.transition.SharedElementActivity" />
+        <activity android:name=".view.transition.MultipleSharedElementsActivity"></activity>
     </application>
 
 </manifest>
