@@ -45,6 +45,7 @@ class TopActivity : AppCompatActivity(), TopViewContentAdapter.OnItemClickListen
         when(position) {
             0 -> Navigator.goTransitionView(this)
             1 -> Navigator.goFragmentTransitionView(this)
+            2 -> Navigator.goDialogTransitionView(this)
             else -> {
                 // Do nothing
             }

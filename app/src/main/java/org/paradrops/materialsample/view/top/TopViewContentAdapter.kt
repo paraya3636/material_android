@@ -15,7 +15,10 @@ class TopViewContentAdapter(private val context: Context) : RecyclerView.Adapter
     }
     var onItemClickListener: OnItemClickListener? = null
 
-    private val items = arrayOf("Activity Transition", "Fragment Transition")
+    private val items = arrayOf(
+            "Activity Transition",
+            "Fragment Transition",
+            "Dialog Transition")
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.view_top_content_item, parent, false)
