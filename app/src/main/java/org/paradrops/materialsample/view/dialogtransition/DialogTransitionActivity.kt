@@ -18,13 +18,13 @@ class DialogTransitionActivity : AppCompatActivity() {
     }
 
     private val dialogFragmentTransitionButton by bindView<ImageButton>(R.id.dialogFragmentTransitionButton)
+    private val dialogActivityTransitionButton by bindView<ImageButton>(R.id.dialogActivityTransitionButton)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dialog_transition)
         dialogFragmentTransitionButton.setOnClickListener {
-
-            val dialog = SharedElementDialog()
+            val dialog = SharedElementDialogFragment()
             // enter
             dialog.sharedElementEnterTransition = ScaleChangeTransition()
             dialog.enterTransition = Fade()
@@ -38,7 +38,11 @@ class DialogTransitionActivity : AppCompatActivity() {
                     .beginTransaction()
                     .addSharedElement(dialogFragmentTransitionButton, sharedElementTag)
                     .addToBackStack(null)
-            dialog.show(transaction, "SharedElementDialog")
+            dialog.show(transaction, "SharedElementDialogFragment")
+        }
+
+        dialogActivityTransitionButton.setOnClickListener {
+            SharedElementDialogActivity.show(this, dialogActivityTransitionButton)
         }
     }
 }

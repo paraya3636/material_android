@@ -12,13 +12,45 @@
     android:gravity="center_horizontal"
     tools:context="org.paradrops.materialsample.view.dialogtransition.DialogTransitionActivity">
 
-    <ImageButton
-        android:id="@+id/dialogFragmentTransitionButton"
-        android:layout_width="132dp"
-        android:layout_height="132dp"
-        android:transitionName="@string/CommonSharedImage"
-        android:scaleType="centerCrop"
-        android:background="@android:color/transparent"
-        android:src="@drawable/blue_eye_cat"
-        android:foreground="?attr/selectableItemBackground"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <ImageButton
+            android:id="@+id/dialogFragmentTransitionButton"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
+            android:transitionName="@string/CommonSharedImage"
+            android:scaleType="centerCrop"
+            android:background="@android:color/transparent"
+            android:src="@drawable/blue_eye_cat"
+            android:foreground="?attr/selectableItemBackground"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            android:text="DialogFragment Transition(Not working…;-()"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/dialogActivityTransitionButton"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
+            android:transitionName="@string/CommonSharedImage"
+            android:scaleType="centerCrop"
+            android:background="@android:color/transparent"
+            android:src="@drawable/baby_cats"
+            android:foreground="?attr/selectableItemBackground"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DialogActivity Transition"/>
+    </LinearLayout>
 </LinearLayout>

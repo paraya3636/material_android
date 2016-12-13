@@ -23,7 +23,9 @@
         <activity android:name=".view.activitytransition.SharedElementActivity" />
         <activity android:name=".view.activitytransition.MultipleSharedElementsActivity" />
         <activity android:name=".view.fragmenttransition.FragmentTransitionActivity" />
-        <activity android:name=".view.dialogtransition.DialogTransitionActivity"></activity>
+        <activity android:name=".view.dialogtransition.DialogTransitionActivity" />
+        <activity android:name=".view.dialogtransition.SharedElementDialogActivity"
+            android:theme="@style/DialogActivityTheme"/>
     </application>
 
 </manifest>

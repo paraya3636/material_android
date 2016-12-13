@@ -6,7 +6,7 @@ import android.support.v4.app.DialogFragment
 import android.support.v7.app.AlertDialog
 import org.paradrops.materialsample.R
 
-class SharedElementDialog : DialogFragment() {
+class SharedElementDialogFragment : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val builder = AlertDialog.Builder(context)
