@@ -26,5 +26,5 @@
         android:layout_height="match_parent"
         android:transitionName="@string/CommonSharedImage"
         android:scaleType="fitStart"
-        android:src="@drawable/baby_cats" />
+        android:src="@drawable/cat02" />
 </LinearLayout>

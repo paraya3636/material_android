@@ -16,10 +16,11 @@
         android:background="@android:color/white">
 
         <ImageView
+            android:id="@+id/imageView"
             android:layout_width="300dp"
             android:layout_height="188dp"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/baby_cats"/>
+            tools:src="@drawable/cat01"/>
         <Button
             style="?attr/borderlessButtonStyle"
             android:id="@+id/button"

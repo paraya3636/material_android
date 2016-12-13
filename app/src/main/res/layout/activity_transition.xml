@@ -27,7 +27,7 @@
                 android:layout_height="132dp"
                 android:scaleType="centerCrop"
                 android:background="@android:color/transparent"
-                android:src="@drawable/blue_eye_cat"
+                android:src="@drawable/cat01"
                 android:foreground="?attr/selectableItemBackground"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -46,7 +46,7 @@
                 android:layout_height="132dp"
                 android:scaleType="centerCrop"
                 android:background="@android:color/transparent"
-                android:src="@drawable/baby_cats"
+                android:src="@drawable/cat02"
                 android:foreground="?attr/selectableItemBackground"/>
             <TextView
                 android:id="@+id/multipleSharedElementsTitle"

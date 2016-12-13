@@ -17,5 +17,5 @@
         android:layout_centerInParent="true"
         android:transitionName="@string/CommonSharedImage"
         android:scaleType="fitStart"
-        android:src="@drawable/blue_eye_cat"/>
+        android:src="@drawable/cat01"/>
 </RelativeLayout>
