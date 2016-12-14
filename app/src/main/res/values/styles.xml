@@ -10,7 +10,7 @@
         <item name="android:windowContentTransitions">true</item>
     </style>
     
-    <style name="DialogActivityTheme" parent="AppTheme">
+    <style name="DialogActivityTheme" parent="AppTheme.NoActionBar">
         <item name="android:windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>

@@ -37,7 +37,6 @@ class SharedElementDialogActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
         setContentView(R.layout.activity_shared_element_dialog)
         imageView.setImageResource(imageResId)
 
