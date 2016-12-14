@@ -10,6 +10,7 @@ import android.view.View
 import android.view.Window
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.RelativeLayout
 import butterknife.bindView
 import org.paradrops.materialsample.R
 
@@ -29,6 +30,7 @@ class SharedElementDialogActivity : AppCompatActivity() {
     }
 
     private val imageResId by lazy { intent.getIntExtra(ImageResourceId, 0) }
+    private val contentView by bindView<RelativeLayout>(R.id.contentView)
     private val imageView by bindView<ImageView>(R.id.imageView)
     private val button by bindView<Button>(R.id.button)
 
@@ -37,8 +39,13 @@ class SharedElementDialogActivity : AppCompatActivity() {
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
         setContentView(R.layout.activity_shared_element_dialog)
         imageView.setImageResource(imageResId)
+
+        contentView.setOnClickListener {
+            supportFinishAfterTransition()
+        }
+
         button.setOnClickListener {
-            onBackPressed()
+            supportFinishAfterTransition()
         }
     }
 }
