@@ -24,7 +24,7 @@ class DialogTransitionActivity : AppCompatActivity() {
         gridView.adapter = CatsImageViewAdapter.create(this)
         gridView.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
             val resId = CatsImageViewAdapter.items()[position]
-            SharedElementDialogActivity.show(this, view, resId)
+            SharedElementDialogActivity.show(this, view, view, resId)
         }
     }
 }

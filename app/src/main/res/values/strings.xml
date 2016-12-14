@@ -5,6 +5,7 @@
 
 
     <!-- Shared Element Transition name -->
+    <string name="CommonSharedViewContainer">CommonSharedViewContainer</string>
     <string name="CommonSharedTitle">CommonSharedTitle</string>
     <string name="CommonSharedImage">CommonSharedImage</string>
 </resources>

@@ -5,9 +5,9 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.ActivityOptionsCompat
+import android.support.v4.util.Pair
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.view.Window
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.RelativeLayout
@@ -18,13 +18,14 @@ class SharedElementDialogActivity : AppCompatActivity() {
     companion object {
         private val ImageResourceId = "ImageResourceId"
 
-        fun show(context: Context, sharedElement: View, imageResId: Int) {
+        fun show(context: Context, sharedViewContainer: View, sharedImage: View, imageResId: Int) {
             val intent = Intent(context, SharedElementDialogActivity::class.java)
             intent.putExtra(ImageResourceId, imageResId)
-            val options = ActivityOptionsCompat.makeSceneTransitionAnimation(
-                    context as Activity,
-                    sharedElement,
-                    context.getString(R.string.CommonSharedImage))
+
+            val container = Pair<View, String>(sharedViewContainer, context.getString(R.string.CommonSharedViewContainer))
+            val image = Pair<View, String>(sharedImage, context.getString(R.string.CommonSharedImage))
+
+            val options = ActivityOptionsCompat.makeSceneTransitionAnimation(context as Activity, container, image)
             context.startActivity(intent, options.toBundle())
         }
     }
